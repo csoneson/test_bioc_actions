@@ -6,7 +6,6 @@ on:
 jobs:
   test_actions:
 
-    # define the operating systems and R versions we want to test on
     strategy:
       fail-fast: false
       matrix:
@@ -22,13 +21,12 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-    # steps to run in the defined environments
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
     
       - name: setup tinytex
         uses: r-lib/actions/setup-tinytex@v2
-        env:
-          TINYTEX_VERSION: 2022.04.04
-          TINYTEX_INSTALLER: TinyTeX
+        #env:
+        #  TINYTEX_VERSION: 2022.04.04
+        #  TINYTEX_INSTALLER: TinyTeX
