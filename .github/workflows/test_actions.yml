@@ -27,6 +27,7 @@ jobs:
     
       - name: setup tinytex
         uses: r-lib/actions/setup-tinytex@v2
-        #env:
+        env:
+          TINYTEX_INSTALLER: TinyTeX
         #  TINYTEX_VERSION: 2022.04.04
-        #  TINYTEX_INSTALLER: TinyTeX
+        
