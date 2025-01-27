@@ -29,5 +29,5 @@ jobs:
         uses: r-lib/actions/setup-tinytex@v2
         env:
           TINYTEX_INSTALLER: TinyTeX
-          TINYTEX_VERSION: 2023.04
+          TINYTEX_VERSION: daily
         
