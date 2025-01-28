@@ -43,4 +43,9 @@ jobs:
           ), 'test.tex')
           tinytex::pdflatex('test.tex')
         shell: Rscript {0}
+    
+      - name: Upload pdf
+        uses: actions/upload-artifact@v4
+        path: "test.pdf"
+
         
